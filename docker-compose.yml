@@ -8,6 +8,6 @@ services:
     environment:
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-jemo-jemo.a.aivencloud.com:28659/defaultdb
-      SPRING_DATASOURCE_USERNAME: avnadmin
-      SPRING_DATASOURCE_PASSWORD: AVNS_fIHxu98DS8evCqx15Qm
+      SPRING_DATASOURCE_USERNAME: ${JEMO_DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${JEMO_DB_PASSWORD}
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
