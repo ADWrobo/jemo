@@ -14,8 +14,12 @@ See the Dockerfile and docker-compose.yml for more details.
 In order to get this running, there are a few steps you need to take.
 * Clone this repository into a local directory.
 * Ensure Docker desktop is installed on your host.
-* This project's `application.properties` uses environment variables for connecting to an Avien MySQL server:
+* This project's `application.properties` and `docker-compose` uses environment variables for connecting to an Avien MySQL server:
   * Be sure to add the DB username and password as environment variables to your BASH profile!
+  * Additionally, set up a .env file in the same directory as your docker-compose.yml, and add the environment variables there:
+    * export JEMO_DB_USERNAME=example
+    * export JEMO_DB_PASSWORD=example
+  * DO NOT add the .env file to any public repository! 
   * If you are not pushing changes to `application.properties` to a public repo, I _suppose_ you could hardcode these values...
 * From the `jemo` directory, run `docker-compose build` - this will build the Docker image.
 * Now run `docker-compose up -d` - this will run the Docker container (`-d` will allow you to perform CL actions within the container).
