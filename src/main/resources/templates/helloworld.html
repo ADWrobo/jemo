@@ -12,16 +12,21 @@
             padding: 0;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 100vh;
         }
 
-        h1 {
+        h1, p {
             text-align: center;
+            margin: 10px 0;
         }
     </style>
 </head>
-<body>
-<h1 th:text="${message}">Placeholder Text</h1>
-</body>
+    <body>
+        <h1 th:text="${message}">Placeholder Text</h1>
+        <p>Key Contributors:</p>
+        <p th:text="${name}">Placeholder Text</p>
+    </body>
 </html>
