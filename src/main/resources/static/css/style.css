@@ -1,0 +1,56 @@
+/* style.css */
+body {
+    background-color: black;
+    color: #33ff33;
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1, p {
+    text-align: center;
+    margin: 10px 0;
+    animation: swoopIn 1s ease-out;
+}
+
+@keyframes swoopIn {
+    0% {
+        visibility: hidden;
+        transform: translateX(-100vw);
+    }
+    1% {
+        visibility: visible;
+    }
+    100% {
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+
+.animating {
+    animation-name: swoopIn;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+/* Individual animation timings */
+.h1-animation {
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+}
+
+.p1-animation {
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+}
+
+.p2-animation {
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+}
