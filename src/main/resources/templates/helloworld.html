@@ -2,31 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Hello World</title>
-<!--    This will need to be broken out into a stylesheet, I think-->
-    <style>
-        body {
-            background-color: black;
-            color: #33ff33;
-            font-family: "Courier New", Courier, monospace;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        h1, p {
-            text-align: center;
-            margin: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
     <body>
-        <h1 th:text="${message}">Placeholder Text</h1>
-        <p>Key Contributors:</p>
-        <p th:text="${name}">Placeholder Text</p>
+        <h1 class="animating h1-animation" th:text="${message}">Placeholder Text</h1>
+        <p class="animating p1-animation">Key Contributors:</p>
+        <p class="animating p2-animation" th:text="${name}">Placeholder Text</p>
     </body>
 </html>
